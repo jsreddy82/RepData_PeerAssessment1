@@ -1,9 +1,9 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output:   
-  html_document
-keep_md: true
+output:   html_document
+    keep_md: true
 ---
+
 
 ## Loading and preprocessing the data
 Reading and preprocessing data  
@@ -23,7 +23,6 @@ perDay <- aggregate(cleanData$steps,by=list(cleanData$date),FUN=sum)
 colnames(perDay) <- c("day","totalSteps")
 hist(perDay$totalSteps,main="Steps per day", xlab="Total Steps")
 ```
-
 Mean: 
 ```{r}
 mean(perDay$totalSteps)
@@ -48,13 +47,11 @@ highest <- perInterval[indx,1]
 ```
 
 
-
 ## Imputing missing values
-Total number of missing values: 
-```{r}
-sum(is.na(myData$steps))
-```
+
+
 
 ## Are there differences in activity patterns between weekdays and weekends?
+
 
 
